@@ -15,8 +15,8 @@ num_epochs = 300  # 因为要让他过拟合，epoch数要多一些
 # 加载数据
 dataset = 'origin'
 train_directory = os.path.join(dataset, 'train')
-valid_directory = os.path.join(dataset, 'valid')  # 就老师给的test
-# 直接跑，不用数据增强，在验证集上75%的准确率，数据增强全部打开，84%的准确率
+valid_directory = os.path.join(dataset, 'valid')  
+# 直接跑，不用数据增强
 image_transforms = {
     'train': transforms.Compose([
         transforms.Grayscale(num_output_channels=3),
